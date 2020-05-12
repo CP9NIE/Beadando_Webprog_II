@@ -46,6 +46,12 @@ div.bejegyzes{
   font-size: 18px;
 }
 
+div.profile{
+	color:#660066;
+  text-align: center;
+  font-size: 18px;
+}
+
 hr.footer{
 	 position: fixed;
   left: 0;

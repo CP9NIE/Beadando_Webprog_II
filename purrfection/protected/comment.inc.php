@@ -13,4 +13,12 @@ function setComments($conn){
 
 function getComments($conn) {
 	$sql = "SELECT * FROM comments";
+	$result = $conn->query($sql);
+	while($row = $result->fetch_assoc()){
+		echo $row['uid']."<br>";
+		echo $row['date']."<br>";
+		echo $row['message']."<br><br>";
+	}
+	
+	
 }
