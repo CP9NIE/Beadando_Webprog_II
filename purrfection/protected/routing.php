@@ -25,7 +25,6 @@ switch ($_GET['P']) {
 	
 	case 'gallery': IsUserLoggedIn() ? require_once PROTECTED_DIR.'gallery.php' : header('Location: index.php'); break;
 	
-	case 'picupload': IsUserLoggedIn() ? require_once PROTECTED_DIR.'gallery.upload.include.php' : header('Location: index.php'); break;
 	
 	case 'setcomments': IsUserLoggedIn() ? require_once PROTECTED_DIR.'comment.inc.php' : header('Location: index.php'); break;
 

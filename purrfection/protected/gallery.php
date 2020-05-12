@@ -47,6 +47,7 @@
 	<?php
 	if(isset($_session['username']))
 	{
+		
 		echo '<div class="gallery-upload"  >
 			<form  action="gallery.upload.include.php" method="post" enctype="multipart/form-data" name="feltolt">
 				<input type="text" name="filename" placeholder="filename">

@@ -40,22 +40,43 @@ input{
 	color: #fff;
 	border-radius: 5px;
 }
-div.bejegyzes{
+.bejegyzes{
 	color:#660066;
   text-align: center;
   font-size: 18px;
 }
 
-div.profile{
+.profile{
 	color:#660066;
   text-align: center;
   font-size: 18px;
 }
 
-hr.footer{
+.footer{
 	 position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
 }
+
+.comments{
+	width:800px;
+	padding:10px;
+	background-color: white;
+	border-radius:5px;
+	margin-bottom:5px;
+	
+}
+.anon{
+	 font-family: "Lucida Console", Courier, monospace;
+	 font-weight: bold;
+}
+
+.datum{
+	font-size:12px;
+}
+
+
+
+

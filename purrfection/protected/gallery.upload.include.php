@@ -1,9 +1,11 @@
 <?php
 
-if(isste($_POST['submit'])){
+if(isste($_POST['submit']))
+{
 
 	$newFilename = $_POST['filename'];
-	if(empty($_POST['$newFilename']) {
+	if(empty($_POST['$newFilename']))
+	{
 		$newFilename = "gallery";
 	} 
 	else 
@@ -58,10 +60,12 @@ if(isste($_POST['submit'])){
 						
 						//a kérdőjelek placeholderek....
 						$sql= "INSERT INTO gallery (titleGallery , descGallery , imgFullNameGallery, orderGallery ) VALUES (?,?,?,?);";
-						if(!mysqli_stmt_prepare($stmt,$sql)){
+						if(!mysqli_stmt_prepare($stmt,$sql))
+						{
 							echo "SQL ERROR";
 						}
-						else{
+						else
+						{
 							mysqli_stmt_bind_param($stmt, "ssss", $imageTitle,$imageDesc,$imageFullname,$imageorder);
 							mysqli_stmt_execute($stmt);
 							
@@ -71,12 +75,14 @@ if(isste($_POST['submit'])){
 					}
 				}
 			}
-			else{
+			else
+			{
 				echo "Too big size";
 			exit();
 			}
 		}
-		else{
+		else
+		{
 			echo "Error";
 			exit();
 		}
