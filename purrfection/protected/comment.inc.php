@@ -10,3 +10,7 @@ function setComments($conn){
 		$result = $conn ->query($sql);
 	}
 }
+
+function getComments($conn) {
+	$sql = "SELECT * FROM comments";
+}

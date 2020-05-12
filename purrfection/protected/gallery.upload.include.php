@@ -15,20 +15,20 @@ if(isste($_POST['submit'])){
 	$imageTitle = $_POST['filetitle'];
 	$imageDesc = $_POST['filedesc'];
 	
-	$file = $FILES['file'];
+	$file = $_FILES['file'];
 	
 	$filename = $file["name"];
 	$filetype = $file["type"];
 	$filenTempName = $file["tmp_name"];
 	$fileError = $file["error"];
-	$filenSize = $file["size"];
+	$fileSize = $file["size"];
 	
 	$fileExt = explode("." , $filename);
 	$fileActualExt = strtolower(end($fileExt));
 	
 	//csak ezeket a formátumokat fogadjuk el...Ha nem ezeket adja meg valaki ,akkor hibát dob ki...
 	
-	$allowed = array("jpg", "jpeg","png");
+	$allowed = array("jpg", "jpeg", "png");
 	
 	//A fájl méret nem lehet nagyobb 2000000 b-nál és a fájlnevek nem egyezhetnek, ezért generálunk egyedi azonosítót minden feltöltött képnek....
 	if(in_array($fileActualExt,$allowed )) {
@@ -39,7 +39,7 @@ if(isste($_POST['submit'])){
 				include_once "gallerydb";
 				//HA üres akkor hibát dob ki
 				if(empty($imageTitle) ||empty($imageDesc) ){
-					header("Location: /gallery.php?upload=empty");
+					header("Location: /gallery.php?p=empty");
 					exit();
 				}
 				//tényleges fájlfeltöltés
@@ -66,7 +66,7 @@ if(isste($_POST['submit'])){
 							mysqli_stmt_execute($stmt);
 							
 							move_uploaded_file($filenTempName,$fileDestination );
-							header("Location: /gallery.php?upload=success");
+							header("Location: /gallery.php?p=success");
 						}
 					}
 				}
