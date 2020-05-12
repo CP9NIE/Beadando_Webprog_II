@@ -1,5 +1,5 @@
 <hr>
-
+<div text-align: center;>
 <a href="index.php">Home</a>
 <?php if(!IsUserLoggedIn()) : ?>
 	<span> &nbsp; | &nbsp; </span>
@@ -14,11 +14,9 @@
 
 	<?php if(isset($_SESSION['permission']) && $_SESSION['permission'] >= 1) : ?>
 		<span> &nbsp; || &nbsp; </span>
-		<a href="index.php?P=users">User list</a>
+		<a href="index.php?P=users">The Users</a>
 		<span> &nbsp; | &nbsp; </span>
-		<a href="index.php?P=list_worker">List workers</a>
-		<span> &nbsp; | &nbsp; </span>
-		<a href="index.php?P=add_worker">Add worker</a>
+		<a href="index.php?P=profile">Your profile</a>
 		<span> &nbsp; || &nbsp; </span>
 	<?php else : ?>
 		<span> &nbsp; | &nbsp; </span>
@@ -26,5 +24,5 @@
 
 	<a href="index.php?P=logout">Logout</a>
 <?php endif; ?>
-
+</div>
 <hr>

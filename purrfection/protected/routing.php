@@ -21,9 +21,13 @@ switch ($_GET['P']) {
 	
 	case 'users': IsUserLoggedIn() ? require_once PROTECTED_DIR.'user/user_list.php' : header('Location: index.php'); break;
 	
-	case 'gallery': IsUserLoggedIn() ? require_once PROTECTED_DIR.'gallery.php' : header('Location: gallery.php'); break;
+	case 'user': require_once PROTECTED_DIR.'user/profile.php'; break;
 	
-	case 'picupload': IsUserLoggedIn() ? require_once PROTECTED_DIR.'gallery-upload.include.php' : header('Location: gallery.php'); break;
+	case 'gallery': IsUserLoggedIn() ? require_once PROTECTED_DIR.'gallery.php' : header('Location: index.php'); break;
+	
+	case 'picupload': IsUserLoggedIn() ? require_once PROTECTED_DIR.'gallery.upload.include.php' : header('Location: index.php'); break;
+	
+	case 'setcomments': IsUserLoggedIn() ? require_once PROTECTED_DIR.'comment.inc.php' : header('Location: index.php'); break;
 
 	default: require_once PROTECTED_DIR.'normal/404.php'; break;
 }

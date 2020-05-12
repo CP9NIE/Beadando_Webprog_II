@@ -9,7 +9,7 @@ if(isste($_POST['submit'])){
 	else 
 	{
 		//hogy kiküszöböljük a hibás fájlneveket....
-		$newFilename = strtolower(str_replace(" ","-", $newFilename));
+		$newFilename = strtolower(str_replace(" ", "-", $newFilename));
 	}
 	
 	$imageTitle = $_POST['filetitle'];
@@ -30,7 +30,7 @@ if(isste($_POST['submit'])){
 	
 	$allowed = array("jpg", "jpeg","png");
 	
-	//A fájl méret nem lehet nagyobb 2000000 kb-nál és a fájlnevek nem egyezhetnek, ezért generálunk egyedi azonosítót minden feltöltött képnek....
+	//A fájl méret nem lehet nagyobb 2000000 b-nál és a fájlnevek nem egyezhetnek, ezért generálunk egyedi azonosítót minden feltöltött képnek....
 	if(in_array($fileActualExt,$allowed )) {
 		if($fileError === 0) {
 			if($filesize < 2000000){
@@ -84,7 +84,7 @@ if(isste($_POST['submit'])){
 	}
 	else
 	{
-		echo "acceptable fileformats: jpg, jpeg,png";
+		echo "Acceptable fileformats: jpg, jpeg,png";
 		exit();
 	}
 }
