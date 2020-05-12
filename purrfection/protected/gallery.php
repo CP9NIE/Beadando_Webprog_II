@@ -14,7 +14,7 @@
 
 <section class="gallery-links">
 	<div class="wrapper">
-	<h2>gallery</h2>
+	<h2></h2>
 	
 	<div class="gallery-container">
 			<?php

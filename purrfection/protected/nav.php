@@ -1,5 +1,5 @@
 <hr>
-<div text-align: center;>
+<div class="linkek" text-align: center;>
 <a href="index.php">Home</a>
 <?php if(!IsUserLoggedIn()) : ?>
 	<span> &nbsp; | &nbsp; </span>
