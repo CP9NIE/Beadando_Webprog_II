@@ -17,7 +17,7 @@ div.hope{
 }
 
 textarea{
-	position: middle;
+	
 	width:400px;
 	height: 80px;
 	background-color:#fff;
@@ -42,14 +42,22 @@ input{
 }
 .bejegyzes{
 	color:#660066;
-  text-align: center;
-  font-size: 18px;
+	text-align: center;
+	font-size: 18px;
 }
 
 .profile{
 	color:#660066;
-  text-align: center;
-  font-size: 18px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.avatar{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	border-radius: 50%;
 }
 
 .footer{

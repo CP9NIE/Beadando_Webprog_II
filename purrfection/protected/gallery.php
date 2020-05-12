@@ -55,7 +55,7 @@
 				<input type="text" name="filedesc" placeholder="file description">
 				<input type="file" name="file">
 				<button type="submit" name="submit">upload</button>
-			</div>';
+			</div><br><br>'; 
 	}
 		?>
 	
@@ -72,7 +72,7 @@ echo "<form method='POST' action='".setComments($conn)."'>
 <input type='hidden' name='uid' value='Anon'>
 <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
 <textarea name='message'> </textarea><br>
-<button type='submit' name= 'commentSubmit'>Comment</button><br>
+<button type='submit' name= 'commentSubmit'>Comment</button><br><br><br><br>
 </form>";
 
 getComments($conn);

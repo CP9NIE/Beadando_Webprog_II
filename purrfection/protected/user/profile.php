@@ -1,3 +1,4 @@
+<div class="profkep" > <img src='public/prof.jpg' class='avatar' /> </div>
 
 <div class="profile">
 	<h1>Profil</h1>
