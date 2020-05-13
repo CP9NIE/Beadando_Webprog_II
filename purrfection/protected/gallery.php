@@ -32,7 +32,7 @@
 				while($row = mysqli_fetch_assoc($result)){
 				
 					echo '<a href="#">
-					<div style="background-image: url(/gallery/'.$row["imgfullnamegallery"].');" ></div>
+					<div style="background-image: url(gallery/'.$row["imgfullnamegallery"].');" ></div>
 					<h3> '.$row["titlegallery"].' </h3>
 					<p>'.$row["descgallery"].'</p>
 					</a>';

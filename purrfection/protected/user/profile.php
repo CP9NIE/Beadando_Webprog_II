@@ -8,3 +8,4 @@
 	<h4>Jogosultság: <?=$_SESSION['permission'] == 0 ? 'Felhasználó' : 'Adminisztrátor' ?></h3>
 	<hr>
 </div>
+

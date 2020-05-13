@@ -33,11 +33,11 @@ if(isste($_POST['submit']))
 	$allowed = array("jpg", "jpeg", "png");
 	
 	//A fájl méret nem lehet nagyobb 2000000 b-nál és a fájlnevek nem egyezhetnek, ezért generálunk egyedi azonosítót minden feltöltött képnek....
-	if(in_array($fileActualExt,$allowed )) {
+	if(in_array($fileActualExt,$allowed)) {
 		if($fileError === 0) {
 			if($filesize < 2000000){
 				$imageFullname = $newFilename . "." . uniqid("",true) . "." . $fileActualExt;
-				$fileDestination = "protected/gallery/" . $imageFullname;
+				$fileDestination = "./public/gallery/" . $imageFullname;
 				include_once "gallerydb";
 				//HA üres akkor hibát dob ki
 				if(empty($imageTitle) ||empty($imageDesc) ){
@@ -47,7 +47,7 @@ if(isste($_POST['submit']))
 				//tényleges fájlfeltöltés
 				else{
 					$sql = "SELECT * FROM gallery;";
-					$stmt = myqli_stmt_init($conn);
+					$stmt = mysqli_stmt_init($conn);
 					if(!mysqli_stmt_prepare($stmt,$sql)){
 						echo "SQL ERROR";
 					}
